@@ -1,0 +1,29 @@
+# ---- 构建产物：dist/ 里的 exe 完全可由 build_exe.cmd 复现，
+# ---- 单个 9.3 MB，两个 exe 内容完全相同（仅文件名不同），不进仓库
+dist/
+build/
+*.spec
+
+# ---- Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# ---- 运行时产物
+# main() 的兜底异常处理会把崩溃栈写到这里（见 type_at_cursor.pyw 末尾）
+type_at_cursor.log
+*.log
+
+# ---- 编辑器 / IDE
+.vscode/
+.idea/
+*.swp
+*~
+
+# ---- 操作系统
+Thumbs.db
+Desktop.ini
+desktop.ini
