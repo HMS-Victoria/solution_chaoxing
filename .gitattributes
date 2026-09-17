@@ -1,0 +1,11 @@
+# 本机 git 安装了 core.autocrlf=true（D:/Git/etc/gitconfig），会在检出时把
+# LF 改写成 CRLF，导致 clone 出来的文件与本地工作副本字节不一致。
+# 这里显式钉死 LF：仓库里怎么存，检出来就还是怎样，跨平台一致。
+# 注：启动.cmd 的 LF 已实测可用（Windows 的 cmd.exe 解析 .cmd 时不依赖 CRLF）。
+* text=auto eol=lf
+
+# 二进制文件不做任何换行处理
+*.exe binary
+*.png binary
+*.ico binary
+*.zip binary
