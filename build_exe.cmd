@@ -1,12 +1,19 @@
 @echo off
-rem Build a single-file exe. Everything stays ASCII on purpose: this file is
-rem parsed with the OEM codepage, so Chinese literals here would get mangled.
-rem The Chinese-named copy is produced without any non-ASCII literal below.
+setlocal
+set "PIP_CACHE_DIR=%~dp0build\pip-cache"
 cd /d "%~dp0"
-py -3.9 -m PyInstaller --noconfirm --onefile --windowed --name TypeAtCursor ^
-  --distpath "%~dp0dist" --workpath "%TEMP%\tac_build" --specpath "%TEMP%\tac_build" ^
-  "%~dp0type_at_cursor.pyw"
+rem ASCII only. BUILD_PYTHON optionally selects a Python 3.9.13 x64 executable.
+if exist ".venv-build\Scripts\python.exe" goto ready
+if defined BUILD_PYTHON (
+  "%BUILD_PYTHON%" -m venv .venv-build
+) else (
+  py -3.9 -m venv .venv-build
+)
 if errorlevel 1 exit /b 1
-powershell -NoProfile -Command "Copy-Item -LiteralPath 'dist\TypeAtCursor.exe' -Destination ('dist\' + [char]0x8F93 + [char]0x5165 + [char]0x5230 + [char]0x5149 + [char]0x6807 + '.exe') -Force"
+:ready
+".venv-build\Scripts\python.exe" -c "import sys,struct; assert sys.version_info[:3] == (3,9,13) and struct.calcsize('P') == 8, 'Python 3.9.13 x64 required'"
 if errorlevel 1 exit /b 1
-echo Done. See the dist folder.
+".venv-build\Scripts\python.exe" -m pip install --disable-pip-version-check -r requirements-build.txt
+if errorlevel 1 exit /b 1
+".venv-build\Scripts\python.exe" build_release.py
+exit /b %errorlevel%

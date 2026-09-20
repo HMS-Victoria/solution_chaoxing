@@ -1,5 +1,4 @@
-# ---- 构建产物：dist/ 里的 exe 完全可由 build_exe.cmd 复现，
-# ---- 单个 9.3 MB，两个 exe 内容完全相同（仅文件名不同），不进仓库
+# ---- 构建产物与隔离依赖（发行文件在 dist/v<版本>/）
 dist/
 build/
 *.spec
@@ -9,6 +8,7 @@ __pycache__/
 *.py[cod]
 *.egg-info/
 .venv/
+.venv-build/
 venv/
 env/
 

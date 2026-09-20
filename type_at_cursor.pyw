@@ -17,6 +17,8 @@ import threading
 import time
 from ctypes import wintypes
 
+APP_VERSION = "1.0.0"
+
 # ----------------------------------------------------------------- Win32 定义
 
 INPUT_KEYBOARD = 1
@@ -141,13 +143,14 @@ tk = None  # 延迟导入，见 main()：tkinter 缺失时也要能把错误弹�
 class App:
     def __init__(self, root):
         self.root = root
+        self._msg_lock = threading.Lock()
         self._msg = None          # 子线程 → 主线程只通过这两个标志传话
         self._finish = False      # （子线程绝不碰控件，Tk 不是线程安全的）
         self._busy = False
         self._hotkey_down = False
         self._stop = threading.Event()
 
-        root.title("输入到光标")
+        root.title("输入到光标 v" + APP_VERSION)
         root.minsize(560, 400)
 
         top = tk.Frame(root)
@@ -198,9 +201,10 @@ class App:
 
     # ---- 主线程：每 80ms 收一次子线程的消息，顺便查 F8 ----
     def _pump(self):
-        if self._msg is not None:
-            self.status.config(text=self._msg)
-            self._msg = None
+        with self._msg_lock:
+            msg, self._msg = self._msg, None
+        if msg is not None:
+            self.status.config(text=msg)
         if self._finish:
             self._finish = False
             self._busy = False
@@ -210,7 +214,8 @@ class App:
         self.root.after(80, self._pump)
 
     def _post(self, msg):
-        self._msg = msg
+        with self._msg_lock:
+            self._msg = msg
 
     def _select_all(self, _event):
         self.text.tag_add("sel", "1.0", "end-1c")
@@ -277,9 +282,10 @@ class App:
                 if self._stop.is_set():
                     self._post("已中止（%d/%d）" % (i - 1, total))
                     return
-                if send(key_events(ch, enter)) == 0:
+                events = key_events(ch, enter)
+                if events and send(events) != len(events):
                     self._post("输入被系统拒绝（错误 %d）：目标窗口可能以管理员身份运行，"
-                               "请以管理员身份重新启动本工具" % ctypes.get_last_error())
+                               "请关闭目标程序后以普通权限重新打开，再试一次" % ctypes.get_last_error())
                     return
                 if interval >= 0.01 or i == total or i % 20 == 0:
                     self._post("已输入 %d/%d" % (i, total))
