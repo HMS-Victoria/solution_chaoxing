@@ -43,7 +43,7 @@ def main():
     work = ROOT / "build" / ("v" + version + "-" + datetime.now().strftime("%Y%m%d-%H%M%S"))
     work.mkdir(parents=True)
     source_names = ["type_at_cursor.pyw", "build_exe.cmd", "build_release.py",
-                    "requirements-build.txt", "test_release.py", "使用说明.txt"]
+                    "requirements-build.txt", "test_release.py", "README-zh-CN.txt"]
     sources = {name: sha256(ROOT / name) for name in source_names}
     numbers = tuple(int(n) for n in version.split(".")) + (0,)
     resource = work / "version.txt"
@@ -60,7 +60,7 @@ def main():
     commands = [[sys.executable, "type_at_cursor.pyw", "--selftest"],
                 [sys.executable, "test_release.py"],
                 [sys.executable, "-m", "PyInstaller", "--noconfirm", "--clean", "--noupx",
-                 "--onefile", "--windowed", "--name", "输入到光标-Windows-x64",
+                 "--onefile", "--windowed", "--name", "TypeAtCursor-Windows-x64",
                  "--version-file", str(resource), "--distpath", str(output),
                  "--workpath", str(work / "pyinstaller"), "--specpath", str(work),
                  str(ROOT / "type_at_cursor.pyw")]]
@@ -73,7 +73,7 @@ def main():
     for name, digest in sources.items():
         if sha256(ROOT / name) != digest:
             raise SystemExit("Source changed during build: " + name)
-    shutil.copyfile(ROOT / "使用说明.txt", output / "使用说明.txt")
+    shutil.copyfile(ROOT / "README-zh-CN.txt", output / "README-zh-CN.txt")
     assets = {p.name: sha256(p) for p in sorted(output.iterdir()) if p.is_file()}
     (output / "SHA256SUMS").write_text(
         "".join(digest + "  " + name + "\n" for name, digest in assets.items()), encoding="utf-8")

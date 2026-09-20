@@ -2,7 +2,7 @@
 
 一、下载与启动
 发行入口：https://github.com/HMS-Victoria/solution_chaoxing/releases/latest
-双击“输入到光标-Windows-x64.exe”。无需安装 Python，无需账号、联网或模型。
+双击“TypeAtCursor-Windows-x64.exe”。无需安装 Python，无需账号、联网或模型。
 适用范围：Windows 10 / 11 64 位桌面；Windows 10 与无 Python 新用户仍需实机验收。
 正常使用不需要管理员权限。请让工具和目标程序都以普通权限运行。
 启动.cmd 是给源码开发者用的，不是免环境发行程序。

@@ -1,6 +1,6 @@
 # 输入到光标（Type at Cursor）
 
-[下载最新发行版](https://github.com/HMS-Victoria/solution_chaoxing/releases/latest) · [中文使用说明](使用说明.txt) · [发行验收记录](docs/release-readiness/2026-09-20/VERIFICATION.md)
+[下载最新发行版](https://github.com/HMS-Victoria/solution_chaoxing/releases/latest) · [中文使用说明](README-zh-CN.txt) · [发行验收记录](docs/release-readiness/2026-09-20/VERIFICATION.md)
 
 **下载 exe → 双击 → 粘贴文本 → 选择目标窗口 → 按 F8。**
 
@@ -8,7 +8,7 @@
 
 ## 普通用户使用
 
-1. 下载 `输入到光标-Windows-x64.exe`、`使用说明.txt` 和 `SHA256SUMS`。
+1. 下载 `TypeAtCursor-Windows-x64.exe`、`README-zh-CN.txt` 和 `SHA256SUMS`。
 2. 双击 exe，把自己的文本粘贴到工具窗口。
 3. 点进记事本等目标程序的输入位置，按 F8，约 0.6 秒后开始输入。
 4. 也可点击“开始输入”，在默认 3 秒倒计时内切到目标输入框。
@@ -62,8 +62,8 @@ build_exe.cmd
 
 输出：
 
-- `dist/v1.0.0/输入到光标-Windows-x64.exe`
-- `dist/v1.0.0/使用说明.txt`
+- `dist/v1.0.0/TypeAtCursor-Windows-x64.exe`
+- `dist/v1.0.0/README-zh-CN.txt`
 - `dist/v1.0.0/SHA256SUMS`
 
 构建记录保存在 `build/v<版本>-<时间>/`，包含完整日志、版本资源、源码 SHA-256、依赖版本和 Git 基线。已存在的发行目录会阻止重建，请先明确归档旧目录；不会自动删除历史发行包。`dist/` 顶层若有旧版两个 exe，是历史本地产物，不在本次上传清单中。
