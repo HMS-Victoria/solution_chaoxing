@@ -5,7 +5,7 @@
 - 任务：`01_solution_chaoxing.md`；负责人：Codex 当前任务 `01a0beb7-485a-7de3-a6ac-c05341ec6b97`。
 - 仓库：HMS-Victoria/solution_chaoxing；只修改本仓库及其 build/dist/隔离依赖目录。
 - 基线：`ad371f89eda7f0e91eb2223c215140f695e3b77d`。开工本地工作区干净；2026-09-20 20:09 +08:00 实时查询远端 main 同基线、Release 列表为空。
-- 源码提交：`e69184ea01f73eccc1a7ffceb5fec14894c97c3e`。最终 exe 的源码哈希、工具版本与命令见 `build-record.json`；后续文档提交不改变该源码。
+- 源码提交：`8365e18ffbe0a9fa6f57780889a00a205398abfd`。最终 exe 的源码哈希、工具版本与命令见 `build-record.json`；后续文档提交不改变该源码。
 - 无待交接的外部未提交修复；未重置/清理作者文件。`dist/TypeAtCursor.exe` 和 `dist/输入到光标.exe` 两个历史文件原样保留。
 - 用户已在当前任务明确授权“推送并发布 Release”。远端地址与下载校验结果见发布完成后的 `publication.json`。
 
@@ -20,7 +20,7 @@
 
 ## 交付位置
 
-- 用户资产：`dist/v1.0.0/输入到光标-Windows-x64.exe`、`使用说明.txt`、`SHA256SUMS`。
+- 用户资产：`dist/v1.0.0/TypeAtCursor-Windows-x64.exe`、`README-zh-CN.txt`、`SHA256SUMS`。
 - 本目录：HANDOFF、VERIFICATION、RELEASE_NOTES、最终构建记录/日志、哈希、重复构建记录、验收截图与发布下载记录。
 - 完整构建中间文件：`build/v1.0.0-20260920-211058/`；最终重复基准：`build/v1.0.0-20260920-210951/repeat-baseline/`。
 - 首次版本资源格式失败和中间候选保留在此前各 build/v1.0.0-* 目录；不属于发行资产。
@@ -34,3 +34,11 @@
 记事本应用控制曾超时；不得对用户原有文档操作。已用两个独立程序文本框做候选版真实 SendInput 测试，但最终包只重新实测启动和倒计时停止。完整最终包桌面回归仍待完成。只使用自造文本，不测试真实作业提交。
 
 不得为了验收删除作者缓存、卸载其 Python、改系统安全设置或全局环境。本次没有创建新 Windows 用户或 VM。若继续修复代码，应重新构建/校验，不复用本次 exe 充当新源码产物。
+
+## 发布过程补充
+
+GitHub 将上传的中文文件名规范化为 `-Windows-x64.exe` / `default.txt`，即使修改资产 name 字段也一样。已统一采用 `TypeAtCursor-Windows-x64.exe` 与 `README-zh-CN.txt`，中文界面和说明正文保留。首次公开下载使用了草稿阶段的 untagged 链接而返回 404；最终下载以重新查询的公开 v1.0.0 资产链接为准。
+
+本次命名修正提交为 `8365e18ffbe0a9fa6f57780889a00a205398abfd`，最终构建目录为 `build/v1.0.0-20260920-211939/`。重新构建后 exe SHA-256 与已验收的 6156ab89... 完全一致，因此最终停止截图和原有最终包自检仍对应相同二进制。中文说明及 SHA256SUMS 已同步更新。
+
+已发布的 v1.0.0 标签仍指向首次留档提交 d2dd09d，不重写已公开标签；运行时源码与当前打包提交完全相同。标签源码中的旧发行文件名不再用于上传，复现正式资产应使用上述 8365e18 提交或当前 main。Release 正文提供固定源码链接。实际发布资产和公开下载核对结果见 publication.json。

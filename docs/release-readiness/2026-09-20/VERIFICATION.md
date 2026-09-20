@@ -4,7 +4,7 @@
 
 ## 环境和证据
 
-Windows x64，内核 10.0.26200；开发机存在 Python。打包使用 CPython 3.9.13 x64、PyInstaller 6.20.0、hooks 2026.4，其余依赖见 `build-record.json`。源码提交 `e69184ea01f73eccc1a7ffceb5fec14894c97c3e`。
+Windows x64，内核 10.0.26200；开发机存在 Python。打包使用 CPython 3.9.13 x64、PyInstaller 6.20.0、hooks 2026.4，其余依赖见 `build-record.json`。源码提交 `8365e18ffbe0a9fa6f57780889a00a205398abfd`。
 
 初始沙箱用户无法读取安装目录中的 Tcl 文件，误表现为 Tcl 缺失；在有读取权限的宿主检查 Tcl 8.6.12 成功。之后沙箱账号启动发生 `CreateProcessWithLogonW failed: 1909`，本任务项目内构建通过已审批的宿主执行完成。没有修改 Python 安装、系统 PATH 或安全设置。此过程不能用作普通权限新用户验收证据。
 
@@ -59,3 +59,11 @@ PyInstaller 警告集中于 Windows 不使用的 posix/pwd/grp/resource 等条�
 ```
 
 不要直接重建覆盖已有发行目录。先明确归档，再运行 build_exe.cmd；构建和校验记录应与待发布源码保持一致。
+
+## 发布过程补充
+
+GitHub 将上传的中文文件名规范化为 `-Windows-x64.exe` / `default.txt`，即使修改资产 name 字段也一样。已统一采用 `TypeAtCursor-Windows-x64.exe` 与 `README-zh-CN.txt`，中文界面和说明正文保留。首次公开下载使用了草稿阶段的 untagged 链接而返回 404；最终下载以重新查询的公开 v1.0.0 资产链接为准。
+
+本次命名修正提交为 `8365e18ffbe0a9fa6f57780889a00a205398abfd`，最终构建目录为 `build/v1.0.0-20260920-211939/`。重新构建后 exe SHA-256 与已验收的 6156ab89... 完全一致，因此最终停止截图和原有最终包自检仍对应相同二进制。中文说明及 SHA256SUMS 已同步更新。
+
+已发布的 v1.0.0 标签仍指向首次留档提交 d2dd09d，不重写已公开标签；运行时源码与当前打包提交完全相同。标签源码中的旧发行文件名不再用于上传，复现正式资产应使用上述 8365e18 提交或当前 main。Release 正文提供固定源码链接。实际发布资产和公开下载核对结果见 publication.json。

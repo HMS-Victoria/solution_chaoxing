@@ -10,7 +10,7 @@ from PyInstaller.archive.readers import CArchiveReader
 
 root = Path(__file__).resolve().parents[3]
 release = root / 'dist' / 'v1.0.0'
-exe = release / '输入到光标-Windows-x64.exe'
+exe = release / 'TypeAtCursor-Windows-x64.exe'
 pe = pefile.PE(str(exe))
 assert pe.FILE_HEADER.Machine == 0x8664
 assert pe.OPTIONAL_HEADER.Subsystem == 2

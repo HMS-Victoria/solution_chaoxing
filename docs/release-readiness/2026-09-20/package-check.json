@@ -8,8 +8,8 @@
   "frozen_selftest_exit": 0,
   "frozen_selftest_environment": "Python absent from PATH; isolated temp/profile variables; same development OS/account",
   "assets_sha256": {
-    "使用说明.txt": "bb5385bf130622c53345836c0b5b04e3f5fae4d1d4f409d787cb987811bb9a02",
-    "输入到光标-Windows-x64.exe": "6156ab89153aac8ff3c3649d23f0c816e8746fa1222b38e832e253e8a15ab933"
+    "README-zh-CN.txt": "75bc83e7e9ac9081e25786af4c15977849e94160a144ea70a5f12354df094345",
+    "TypeAtCursor-Windows-x64.exe": "6156ab89153aac8ff3c3649d23f0c816e8746fa1222b38e832e253e8a15ab933"
   },
   "real_desktop_test": false,
   "clean_windows_user_test": false
