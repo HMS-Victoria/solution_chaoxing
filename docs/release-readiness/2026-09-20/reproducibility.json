@@ -1,0 +1,8 @@
+{
+  "baseline_build": "v1.0.0-20260920-210951",
+  "repeat_build": "v1.0.0-20260920-211058",
+  "source_commit": "e69184ea01f73eccc1a7ffceb5fec14894c97c3e",
+  "sha256": "6156AB89153AAC8FF3C3649D23F0C816E8746FA1222B38E832E253E8A15AB933",
+  "byte_identical": true,
+  "scope": "same machine; independent build/work/cache directories"
+}

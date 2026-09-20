@@ -1,0 +1,66 @@
+{
+  "version": "1.0.0",
+  "built_at": "2026-09-20T13:11:14.347405+00:00",
+  "python": "3.9.13 (tags/v3.9.13:6de2ca5, May 17 2022, 16:36:42) [MSC v.1929 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "architecture": "x64",
+  "packages": {
+    "pip": "26.0.1",
+    "setuptools": "58.1.0",
+    "altgraph": "0.17.5",
+    "importlib-metadata": "8.7.1",
+    "packaging": "26.2",
+    "pefile": "2024.8.26",
+    "pyinstaller": "6.20.0",
+    "pyinstaller-hooks-contrib": "2026.4",
+    "pywin32-ctypes": "0.2.3",
+    "zipp": "3.23.1"
+  },
+  "git_head": "e69184ea01f73eccc1a7ffceb5fec14894c97c3e",
+  "git_status": "?? docs/",
+  "sources_sha256": {
+    "type_at_cursor.pyw": "c15666bcfac1c9cb93abbafb05b53b884b5e52c3af1f397b0d65535953c81289",
+    "build_exe.cmd": "3f05b4c4c8d8ff2073645069c7bdfa7e7efab691465e51cd51d3a31096582635",
+    "build_release.py": "1d8b91a77fcbf48e9397c1ac2c96837b9e4ff799ba720a718efc27a7d7cb4ac4",
+    "requirements-build.txt": "1df0d1734bbd6b44dc799c614aadae84bd97d3efc5475639107038da84646909",
+    "test_release.py": "405b4bfc77ff30c3d3c443318e2fb838341e1a5aa36ce943fd66e3ced4e3fbae",
+    "使用说明.txt": "bb5385bf130622c53345836c0b5b04e3f5fae4d1d4f409d787cb987811bb9a02"
+  },
+  "assets_sha256": {
+    "使用说明.txt": "bb5385bf130622c53345836c0b5b04e3f5fae4d1d4f409d787cb987811bb9a02",
+    "输入到光标-Windows-x64.exe": "6156ab89153aac8ff3c3649d23f0c816e8746fa1222b38e832e253e8a15ab933"
+  },
+  "source_date_epoch": "1789639200",
+  "commands": [
+    [
+      "D:\\desktop\\obj_ai\\无视风险继续黏贴\\.venv-build\\Scripts\\python.exe",
+      "type_at_cursor.pyw",
+      "--selftest"
+    ],
+    [
+      "D:\\desktop\\obj_ai\\无视风险继续黏贴\\.venv-build\\Scripts\\python.exe",
+      "test_release.py"
+    ],
+    [
+      "D:\\desktop\\obj_ai\\无视风险继续黏贴\\.venv-build\\Scripts\\python.exe",
+      "-m",
+      "PyInstaller",
+      "--noconfirm",
+      "--clean",
+      "--noupx",
+      "--onefile",
+      "--windowed",
+      "--name",
+      "输入到光标-Windows-x64",
+      "--version-file",
+      "D:\\desktop\\obj_ai\\无视风险继续黏贴\\build\\v1.0.0-20260920-211058\\version.txt",
+      "--distpath",
+      "D:\\desktop\\obj_ai\\无视风险继续黏贴\\dist\\v1.0.0",
+      "--workpath",
+      "D:\\desktop\\obj_ai\\无视风险继续黏贴\\build\\v1.0.0-20260920-211058\\pyinstaller",
+      "--specpath",
+      "D:\\desktop\\obj_ai\\无视风险继续黏贴\\build\\v1.0.0-20260920-211058",
+      "D:\\desktop\\obj_ai\\无视风险继续黏贴\\type_at_cursor.pyw"
+    ]
+  ]
+}

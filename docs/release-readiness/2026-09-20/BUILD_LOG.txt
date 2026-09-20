@@ -1,0 +1,70 @@
+ok
+ok
+PASS: Unicode, newline skip, partial/rejected input, own-window guard, cancellation
+PASS: worker completion/stop status survives concurrent UI render
+360 INFO: PyInstaller: 6.20.0, contrib hooks: 2026.4
+360 INFO: Python: 3.9.13
+391 INFO: Platform: Windows-10-10.0.26200-SP0
+392 INFO: Python environment: D:\desktop\obj_ai\无视风险继续黏贴\.venv-build
+394 INFO: wrote D:\desktop\obj_ai\无视风险继续黏贴\build\v1.0.0-20260920-211058\输入到光标-Windows-x64.spec
+405 INFO: Removing temporary files and cleaning cache in D:\desktop\obj_ai\无视风险继续黏贴\build\v1.0.0-20260920-211058\cache\pyinstaller
+410 INFO: Module search paths (PYTHONPATH):
+['D:\\desktop\\obj_ai\\无视风险继续黏贴',
+ 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python39\\python39.zip',
+ 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python39\\DLLs',
+ 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python39\\lib',
+ 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python39',
+ 'D:\\desktop\\obj_ai\\无视风险继续黏贴\\.venv-build',
+ 'D:\\desktop\\obj_ai\\无视风险继续黏贴\\.venv-build\\lib\\site-packages',
+ 'D:\\desktop\\obj_ai\\无视风险继续黏贴']
+1254 INFO: checking Analysis
+1254 INFO: Building Analysis because Analysis-00.toc is non existent
+1254 INFO: Looking for Python shared library...
+1254 INFO: Using Python shared library: C:\Users\Administrator\AppData\Local\Programs\Python\Python39\python39.dll
+1254 INFO: Running Analysis Analysis-00.toc
+1254 INFO: Target bytecode optimization level: 0
+1255 INFO: Initializing module dependency graph...
+1259 INFO: Initializing module graph hook caches...
+1289 INFO: Analyzing modules for base_library.zip ...
+3018 INFO: Processing standard module hook 'hook-encodings.py' from 'D:\\desktop\\obj_ai\\无视风险继续黏贴\\.venv-build\\lib\\site-packages\\PyInstaller\\hooks'
+4161 INFO: Processing standard module hook 'hook-heapq.py' from 'D:\\desktop\\obj_ai\\无视风险继续黏贴\\.venv-build\\lib\\site-packages\\PyInstaller\\hooks'
+4837 INFO: Processing standard module hook 'hook-pickle.py' from 'D:\\desktop\\obj_ai\\无视风险继续黏贴\\.venv-build\\lib\\site-packages\\PyInstaller\\hooks'
+6319 INFO: Caching module dependency graph...
+6370 INFO: Analyzing D:\desktop\obj_ai\无视风险继续黏贴\type_at_cursor.pyw
+6400 INFO: Processing standard module hook 'hook-_ctypes.py' from 'D:\\desktop\\obj_ai\\无视风险继续黏贴\\.venv-build\\lib\\site-packages\\PyInstaller\\hooks'
+6413 INFO: Processing pre-find-module-path hook 'hook-tkinter.py' from 'D:\\desktop\\obj_ai\\无视风险继续黏贴\\.venv-build\\lib\\site-packages\\PyInstaller\\hooks\\pre_find_module_path'
+6415 INFO: TclTkInfo: initializing cached Tcl/Tk info...
+7284 INFO: Processing standard module hook 'hook-_tkinter.py' from 'D:\\desktop\\obj_ai\\无视风险继续黏贴\\.venv-build\\lib\\site-packages\\PyInstaller\\hooks'
+7310 INFO: Processing module hooks (post-graph stage)...
+7316 INFO: Processing standard module hook 'hook-_tkinter.py' from 'D:\\desktop\\obj_ai\\无视风险继续黏贴\\.venv-build\\lib\\site-packages\\PyInstaller\\hooks'
+7332 INFO: Performing binary vs. data reclassification (923 entries)
+7997 INFO: Looking for ctypes DLLs
+8001 INFO: Analyzing run-time hooks ...
+8003 INFO: Including run-time hook 'pyi_rth__tkinter.py' from 'D:\\desktop\\obj_ai\\无视风险继续黏贴\\.venv-build\\lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+8042 INFO: Creating base_library.zip...
+8068 INFO: Looking for dynamic libraries
+8356 INFO: Extra DLL search directories (AddDllDirectory): []
+8356 INFO: Extra DLL search directories (PATH): []
+9660 INFO: Warnings written to D:\desktop\obj_ai\无视风险继续黏贴\build\v1.0.0-20260920-211058\pyinstaller\输入到光标-Windows-x64\warn-输入到光标-Windows-x64.txt
+9695 INFO: Graph cross-reference written to D:\desktop\obj_ai\无视风险继续黏贴\build\v1.0.0-20260920-211058\pyinstaller\输入到光标-Windows-x64\xref-输入到光标-Windows-x64.html
+9760 INFO: checking PYZ
+9761 INFO: Building PYZ because PYZ-00.toc is non existent
+9762 INFO: Building PYZ (ZlibArchive) D:\desktop\obj_ai\无视风险继续黏贴\build\v1.0.0-20260920-211058\pyinstaller\输入到光标-Windows-x64\PYZ-00.pyz
+9887 INFO: Building PYZ (ZlibArchive) D:\desktop\obj_ai\无视风险继续黏贴\build\v1.0.0-20260920-211058\pyinstaller\输入到光标-Windows-x64\PYZ-00.pyz completed successfully.
+9927 INFO: checking PKG
+9928 INFO: Building PKG because PKG-00.toc is non existent
+9928 INFO: Building PKG (CArchive) 输入到光标-Windows-x64.pkg
+14111 INFO: Building PKG (CArchive) 输入到光标-Windows-x64.pkg completed successfully.
+14143 INFO: Bootloader D:\desktop\obj_ai\无视风险继续黏贴\.venv-build\lib\site-packages\PyInstaller\bootloader\Windows-64bit-intel\runw.exe
+14144 INFO: checking EXE
+14145 INFO: Building EXE because EXE-00.toc is non existent
+14145 INFO: Building EXE from EXE-00.toc
+14146 INFO: Copying bootloader EXE to D:\desktop\obj_ai\无视风险继续黏贴\dist\v1.0.0\输入到光标-Windows-x64.exe
+14164 INFO: Copying icon to EXE
+14177 INFO: Copying version information to EXE
+14195 INFO: Copying 0 resources to EXE
+14195 INFO: Embedding manifest in EXE
+14208 INFO: Appending PKG archive to EXE
+14224 INFO: Fixing EXE headers
+14380 INFO: Building EXE from EXE-00.toc completed successfully.
+14410 INFO: Build complete! The results are available in: D:\desktop\obj_ai\无视风险继续黏贴\dist\v1.0.0
