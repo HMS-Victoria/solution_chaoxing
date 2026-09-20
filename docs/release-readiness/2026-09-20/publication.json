@@ -1,0 +1,33 @@
+{
+  "checked_at": "2026-09-20T21:22:21.4635622+08:00",
+  "public_download_verified": true,
+  "source_commit": "8365e18ffbe0a9fa6f57780889a00a205398abfd",
+  "release_url": "https://github.com/HMS-Victoria/solution_chaoxing/releases/tag/v1.0.0",
+  "release_id": 392437389,
+  "tag_commit": "d2dd09d8a1564c8e8d99748e4510a1121fb7a3b9",
+  "tag": "v1.0.0",
+  "assets": [
+    {
+      "url": "https://github.com/HMS-Victoria/solution_chaoxing/releases/download/v1.0.0/README-zh-CN.txt",
+      "sha256": "75bc83e7e9ac9081e25786af4c15977849e94160a144ea70a5f12354df094345",
+      "name": "README-zh-CN.txt",
+      "matches_local": true,
+      "size": 2771
+    },
+    {
+      "url": "https://github.com/HMS-Victoria/solution_chaoxing/releases/download/v1.0.0/SHA256SUMS",
+      "sha256": "48d9bdf5fe932323e711f9e2f6474d8d5c18ddfc3482d9f44671b9bb748d64d0",
+      "name": "SHA256SUMS",
+      "matches_local": true,
+      "size": 180
+    },
+    {
+      "url": "https://github.com/HMS-Victoria/solution_chaoxing/releases/download/v1.0.0/TypeAtCursor-Windows-x64.exe",
+      "sha256": "6156ab89153aac8ff3c3649d23f0c816e8746fa1222b38e832e253e8a15ab933",
+      "name": "TypeAtCursor-Windows-x64.exe",
+      "matches_local": true,
+      "size": 9521468
+    }
+  ],
+  "downloaded_exe_selftest_exit": 0
+}

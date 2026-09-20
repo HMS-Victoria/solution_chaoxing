@@ -22,7 +22,7 @@
 
 - 用户资产：`dist/v1.0.0/TypeAtCursor-Windows-x64.exe`、`README-zh-CN.txt`、`SHA256SUMS`。
 - 本目录：HANDOFF、VERIFICATION、RELEASE_NOTES、最终构建记录/日志、哈希、重复构建记录、验收截图与发布下载记录。
-- 完整构建中间文件：`build/v1.0.0-20260920-211058/`；最终重复基准：`build/v1.0.0-20260920-210951/repeat-baseline/`。
+- 完整构建中间文件：`build/v1.0.0-20260920-211939/`；最终重复基准：`build/v1.0.0-20260920-210951/repeat-baseline/`。
 - 首次版本资源格式失败和中间候选保留在此前各 build/v1.0.0-* 目录；不属于发行资产。
 
 ## 下一位 agent
@@ -42,3 +42,5 @@ GitHub 将上传的中文文件名规范化为 `-Windows-x64.exe` / `default.txt
 本次命名修正提交为 `8365e18ffbe0a9fa6f57780889a00a205398abfd`，最终构建目录为 `build/v1.0.0-20260920-211939/`。重新构建后 exe SHA-256 与已验收的 6156ab89... 完全一致，因此最终停止截图和原有最终包自检仍对应相同二进制。中文说明及 SHA256SUMS 已同步更新。
 
 已发布的 v1.0.0 标签仍指向首次留档提交 d2dd09d，不重写已公开标签；运行时源码与当前打包提交完全相同。标签源码中的旧发行文件名不再用于上传，复现正式资产应使用上述 8365e18 提交或当前 main。Release 正文提供固定源码链接。实际发布资产和公开下载核对结果见 publication.json。
+
+发布已完成：https://github.com/HMS-Victoria/solution_chaoxing/releases/tag/v1.0.0 。2026-09-20 21:22 +08:00 从三个无需登录的公开下载链接重新获取，全部 SHA-256 与本地一致；下载的 exe 在 PATH 不含 Python 的条件下执行 --selftest 返回 0。详情见 publication.json。
